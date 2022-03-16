@@ -80,14 +80,14 @@ const Login = () => {
 						<div className="flex flex-col">
 							{hasAccount ? (
 								<button
-									className="mt-5 bg-green-500 hover:bg-blue-700 shadow-xl text-white uppercase text-sm font-semibold px-14 py-3 rounded"
+									className="mt-5 bg-orange-500 hover:bg-orange-500 shadow-xl text-white uppercase text-sm font-semibold px-14 py-3 rounded"
 									onClick={handleLogin}
 								>
 									Sign In
 								</button>
 							) : (
 								<button
-									className="mt-5 bg-green-500 hover:bg-blue-700 shadow-xl text-white uppercase text-sm font-semibold px-14 py-3 rounded"
+									className="mt-5 bg-orange-500 hover:bg-orange-500 shadow-xl text-white uppercase text-sm font-semibold px-14 py-3 rounded"
 									onClick={handleSignUp}
 								>
 									Sign Up

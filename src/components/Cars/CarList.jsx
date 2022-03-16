@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useProducts } from "../../contexts/RentContext";
+import Filtre from "../Filtre/Filtre";
 import CarCard from "./CarCard";
 import "./styles/CarList.css";
 
@@ -46,9 +47,9 @@ const CarList = ({ products }) => {
 						<svg
 							fill="none"
 							stroke="gray"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
 							viewBox="0 0 24 24"
 							class="w-6 h-6"
 						>
@@ -62,7 +63,12 @@ const CarList = ({ products }) => {
 					className="block py-2 px-0 w-avto text-sm pl-10 text-gray-900 bg-transparent border-b-2 border-white appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 					placeholder="Search..."
 					autocomplete="off"
+					value={search}
+					onChange={(e) => setSearch(e.target.value)}
 				/>
+			</div>
+			<div>
+				<Filtre />
 			</div>
 			<section className="car-list lg:pt-[80px] pb-10 lg:pb-20">
 				<div className="container">

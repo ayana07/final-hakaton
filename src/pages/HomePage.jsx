@@ -1,6 +1,7 @@
 import React from "react";
+import HeroSection from "../components/Home/HeroSection";
 import SectionAboutUs from "../components/Home/SectionAboutUs";
-import SectionOurCatalog from "../components/Home/SectionOurCatalog";
+import SectionThree from "../components/Home/SectionThree";
 import NavBar from "../components/NavBar/NavBar";
 import "./styles/HomePage.css";
 
@@ -9,9 +10,10 @@ const HomePage = () => {
 		<>
 			<div className="content">
 				<NavBar />
+				<HeroSection />
 			</div>
 			<SectionAboutUs />
-			{/* <SectionOurCatalog /> */}
+			<SectionThree />
 		</>
 	);
 };

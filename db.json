@@ -1,28 +1,84 @@
 {
-  "cars": [
-    {
-      "name": "skagj",
-      "description": "ksljd",
-      "price": 245,
-      "picture": "https://images7.alphacoders.com/328/thumbbig-328724.webp",
-      "type": "dfkmhd",
-      "id": 1
-    },
-    {
-      "name": "Ferrari",
-      "description": "good",
-      "price": 250,
-      "picture": "https://images2.alphacoders.com/434/thumbbig-434132.webp",
-      "type": "avto car",
-      "id": 4
-    },
-    {
-      "name": "lfdkg",
-      "description": "fdhwo",
-      "price": 500,
-      "picture": "https://images6.alphacoders.com/390/thumbbig-390255.webp",
-      "type": "sdkjgh",
-      "id": 5
-    }
-  ]
+	"cars": [
+		{
+			"name": "DODGE VIPER",
+			"description": "The Dodge Viper sports car can rightfully be called one of the symbols of the American automotive industry. The premiere of the first generation of this machine took place in 1991.",
+			"price": "250$",
+			"picture": "http://cdn.motorpage.ru/Photos/800/4f8e6b91256d9.jpg",
+			"type": "racing",
+			"id": 1
+		},
+		{
+			"name": "DODGE DURANGO",
+			"description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt minus saepe quaerat vel voluptatum, rerum ad omnis ullam molestias cum necessitatibus a ratione, enim vitae temporibus, perspiciatis placeat incidunt excepturi.",
+			"price": "260$",
+			"picture": "http://cdn.motorpage.ru/Photos/800/11A56.jpg",
+			"type": "journey",
+			"id": 2
+		},
+		{
+			"name": "BUGATTI CENTODIECI",
+			"description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt minus saepe quaerat vel voluptatum, rerum ad omnis ullam molestias cum necessitatibus a ratione, enim vitae temporibus, perspiciatis placeat incidunt excepturi.",
+			"price": "240$",
+			"picture": "http://cdn.motorpage.ru/Photos/800/110D7.jpg",
+			"type": "racing",
+			"id": 3
+		},
+		{
+			"name": "DODGE JOURNEY",
+			"description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt minus saepe quaerat vel voluptatum, rerum ad omnis ullam molestias cum necessitatibus a ratione, enim vitae temporibus, perspiciatis placeat incidunt excepturi.",
+			"price": "450$",
+			"picture": "http://cdn.motorpage.ru/Photos/800/Dodge_Journe.jpg",
+			"type": "journey",
+			"id": 4
+		},
+		{
+			"name": "FERRARI ROMA",
+			"description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt minus saepe quaerat vel voluptatum, rerum ad omnis ullam molestias cum necessitatibus a ratione, enim vitae temporibus, perspiciatis placeat incidunt excepturi.",
+			"price": "220$",
+			"picture": "http://cdn.motorpage.ru/Photos/800/116A9.jpg",
+			"type": "simple",
+			"id": 5
+		},
+		{
+			"name": "BUGATTI VEYRON GRAND SPORT",
+			"description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt minus saepe quaerat vel voluptatum, rerum ad omnis ullam molestias cum necessitatibus a ratione, enim vitae temporibus, perspiciatis placeat incidunt excepturi.",
+			"price": "380$",
+			"picture": "http://cdn.motorpage.ru/Photos/800/17.jpg",
+			"type": "racing",
+			"id": 6
+		},
+		{
+			"name": "DODGE CHARGER",
+			"description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt minus saepe quaerat vel voluptatum, rerum ad omnis ullam molestias cum necessitatibus a ratione, enim vitae temporibus, perspiciatis placeat incidunt excepturi.",
+			"price": "260$",
+			"picture": "http://cdn.motorpage.ru/Photos/800/Dodge_12.jpg",
+			"type": "simple",
+			"id": 7
+		},
+		{
+			"name": "PORSCHE BOXSTER GTS",
+			"description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt minus saepe quaerat vel voluptatum, rerum ad omnis ullam molestias cum necessitatibus a ratione, enim vitae temporibus, perspiciatis placeat incidunt excepturi.",
+			"price": "380$",
+			"picture": "http://cdn.motorpage.ru/Photos/800/BoxtersGTS_3.jpg",
+			"type": "journey",
+			"id": 8
+		},
+		{
+			"name": "PORSCHE 911 R",
+			"description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt minus saepe quaerat vel voluptatum, rerum ad omnis ullam molestias cum necessitatibus a ratione, enim vitae temporibus, perspiciatis placeat incidunt excepturi.",
+			"price": "400$",
+			"picture": "http://cdn.motorpage.ru/Photos/800/1B39.jpg",
+			"type": "racing",
+			"id": 9
+		},
+		{
+			"name": "FERRARI 812 GTS",
+			"description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt minus saepe quaerat vel voluptatum, rerum ad omnis ullam molestias cum necessitatibus a ratione, enim vitae temporibus, perspiciatis placeat incidunt excepturi.",
+			"price": "280$",
+			"picture": "http://cdn.motorpage.ru/Photos/800/115CE.jpg",
+			"type": "simple",
+			"id": 10
+		}
+	]
 }
