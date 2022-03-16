@@ -17,6 +17,8 @@ export const useProducts = () => {
 const INIT_STATE = {
 	products: [],
 	productDetails: {},
+	cart: JSON.parse(localStorage.getItem("cart")),
+	cartLength: getCountProductsInCart(),
 };
 
 const reducer = (state = INIT_STATE, action) => {
@@ -25,6 +27,10 @@ const reducer = (state = INIT_STATE, action) => {
 			return { ...state, products: action.payload };
 		case ACTIONS.GET_PRODUCT_DETAILS:
 			return { ...state, productDetails: action.payload };
+		case ACTIONS.GET_CART:
+			return { ...state, cart: action.payload };
+		case ACTIONS.CHANGE_CART_LENGTH:
+			return { ...state, cartLength: action.payload };
 	}
 };
 
@@ -34,7 +40,7 @@ const RentCarContextProvaider = ({ children }) => {
 	const location = useLocation();
 	const navigate = useNavigate();
 
-	// ! ===================== crud start======================
+	// ! =====================CRUD======================
 	const getProducts = async () => {
 		let { data } = await axios(`${JSON_API_PRODUCTS}${window.location.search}`);
 
@@ -66,9 +72,9 @@ const RentCarContextProvaider = ({ children }) => {
 		await axios.patch(`${JSON_API_PRODUCTS}/${newProduct.id}`, newProduct);
 		getProducts();
 	};
-	// ! ===================== crud end========================
+	// ! =============================================
 
-	// Filter
+	//!=====================FILTER===========
 	const fetchByParams = async (query, value) => {
 		const search = new URLSearchParams(location.search);
 		if (value === "all") {
@@ -79,8 +85,9 @@ const RentCarContextProvaider = ({ children }) => {
 		const url = `${location.pathname}?${search.toString()}`;
 		navigate(url);
 	};
+	//!==================================================
 
-	// ! ================cart start==============
+	// ! ================FAVORITES==============
 	const getCart = () => {
 		let cart = JSON.parse(localStorage.getItem("cart"));
 
@@ -182,7 +189,7 @@ const RentCarContextProvaider = ({ children }) => {
 		}
 	}
 
-	// ! ================cart end==============
+	// ! ==================================
 
 	const values = {
 		getProducts,

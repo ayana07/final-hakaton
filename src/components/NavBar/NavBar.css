@@ -7,3 +7,12 @@
 		z-index: 1;
 	}
 }
+
+.btn-favorites {
+	background-color: none;
+	border: none;
+}
+
+.w-7rem {
+	width: 7rem;
+}

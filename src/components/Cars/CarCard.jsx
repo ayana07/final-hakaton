@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { useProducts } from "../../contexts/RentContext";
 import { useAuth } from "../../contexts/AuthContexts";
 import { ADMIN } from "../../consts";
+import "./styles/CarCard.css";
+import { IconButton } from "@mui/material";
+import FavoriteIcon from "@mui/icons-material/FavoriteBorder";
 
 const CarCard = ({ item }) => {
 	const { deleteProduct, addProductToCart, checkProductInCart } = useProducts();
@@ -41,9 +44,9 @@ const CarCard = ({ item }) => {
 					</p>
 					<div>
 						{email === ADMIN ? (
-							<>
+							<div className="flex flex-wrap justify-center">
 								<button
-									className="btn btn-outline mr-20 "
+									className="btn btn-outline m-10 hover:bg-orange-300 "
 									onClick={() => deleteProduct(item.id)}
 								>
 									<svg
@@ -53,15 +56,15 @@ const CarCard = ({ item }) => {
 										stroke="currentColor"
 									>
 										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
+											strokeLinecap="round"
+											strokeLinejoin="round"
 											stroke-width="2"
 											d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
 										/>
 									</svg>
 								</button>
 								<button
-									className="btn btn-outline hover:bg-orange-300"
+									className="btn btn-outline m-10 hover:bg-orange-300"
 									onClick={() => navigate(`/edit/${item.id}`)}
 								>
 									<svg
@@ -70,8 +73,8 @@ const CarCard = ({ item }) => {
 										stroke-width="2"
 										stroke="currentColor"
 										fill="none"
-										stroke-linecap="round"
-										stroke-linejoin="round"
+										strokeLinecap="round"
+										strokeLinejoin="round"
 									>
 										{" "}
 										<path stroke="none" d="M0 0h24v24H0z" />{" "}
@@ -80,43 +83,20 @@ const CarCard = ({ item }) => {
 										<line x1="16" y1="5" x2="19" y2="8" />
 									</svg>
 								</button>
-							</>
+							</div>
 						) : (
-							<>
-								<button onClick={() => addProductToCart(item)}>
-									<h5 color={checkProductInCart(item.id) ? "orange" : ""}>
-										ORDER
-									</h5>
+							<div className="flex flex-col ">
+								<button className="btn btn-outline text-orange-500 mb-2 hover:bg-white hover:text-orange-500 border-orange-700">
+									<h5>ORDER</h5>
 								</button>
-								<button>
-									<svg
-										className="h-8 w-8 text-black"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									>
-										{" "}
-										<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-									</svg>
-								</button>
-								<button>
-									<svg
-										className="h-8 w-8 text-black"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									>
-										{" "}
-										<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-									</svg>
-								</button>
-							</>
+								<div>
+									<IconButton onClick={() => addProductToCart(item)}>
+										<FavoriteIcon
+											color={checkProductInCart(item.id) ? "error" : ""}
+										/>
+									</IconButton>
+								</div>
+							</div>
 						)}
 					</div>
 				</div>

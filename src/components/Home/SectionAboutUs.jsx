@@ -29,13 +29,6 @@ const SectionAboutUs = () => {
 						/>
 					</div>
 				</div>
-				<div className="flex justify-center">
-					<Link to="/about">
-						<button className="text-orange-500 btn btn-outline">
-							Learn more
-						</button>
-					</Link>
-				</div>
 			</div>
 		</>
 	);

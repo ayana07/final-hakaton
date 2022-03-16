@@ -5,7 +5,8 @@ import ReactPaginate from "react-paginate";
 import "./styles/RentCarPage.css";
 import { useProducts } from "../contexts/RentContext";
 import { useLocation } from "react-router-dom";
-import { faArrowCircleLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const RentCarPage = () => {
@@ -32,9 +33,8 @@ const RentCarPage = () => {
 			<NavBar />
 			<CarList products={paginateProducts} />
 			<ReactPaginate
-				// previousLabel={<FontAwesomeIcon icon={faArrowCircleLeft} />}
-				previousLabel="<-"
-				nextLabel="->"
+				previousLabel={<FontAwesomeIcon icon={faArrowLeft} />}
+				nextLabel={<FontAwesomeIcon icon={faArrowRight} />}
 				onPageChange={changePage}
 				pageRangeDisplayed={5}
 				pageCount={pageCount}

@@ -1,11 +1,11 @@
 import React from "react";
 import HomePage from "./pages/HomePage";
-import AboutUsPage from "./pages/AboutUsPage";
 import AuthPage from "./pages/AuthPage";
 import ContactsPage from "./pages/ContactsPage";
 import AdminPage from "./pages/AdminPage";
 import EditRentCarPage from "./pages/EditRentCarPage";
 import RentCarPage from "./pages/RentCarPage";
+import FavoritesPage from "./pages/FavoritesPage";
 import { Route, Routes } from "react-router-dom";
 import { ADMIN } from "./consts";
 import { useAuth } from "./contexts/AuthContexts";
@@ -18,11 +18,6 @@ const MainRoutes = () => {
 			link: "/",
 			element: <HomePage />,
 			id: 1,
-		},
-		{
-			link: "/about",
-			element: <AboutUsPage />,
-			id: 2,
 		},
 		{
 			link: "/auth",
@@ -38,6 +33,11 @@ const MainRoutes = () => {
 			link: "/rents",
 			element: <RentCarPage />,
 			id: 5,
+		},
+		{
+			link: "/favorites",
+			element: <FavoritesPage />,
+			id: 6,
 		},
 	];
 

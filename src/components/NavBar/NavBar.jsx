@@ -2,19 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ADMIN } from "../../consts";
 import { useAuth } from "../../contexts/AuthContexts";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logos.png";
 import "./NavBar.css";
+import { useProducts } from "../../contexts/RentContext";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { Badge } from "@mui/material";
 
 const pages = [
 	{
 		name: "Car Rental",
 		link: "/rents",
 		id: 5,
-	},
-	{
-		name: "About us",
-		link: "/about",
-		id: 2,
 	},
 	{
 		name: "Contacts",
@@ -29,15 +27,14 @@ const NavBar = () => {
 		user: { email },
 	} = useAuth();
 
+	const { cart } = useProducts();
 	return (
 		<>
 			<div className="">
 				<nav className=" px-6 relative md">
 					<div className="flex flex-row justify-between items-center py-2">
 						<Link to="/">
-							{/* <img className='w-8rem' src={logo} alt=''/>
-							 */}
-							<h3 className="text-white">CaRent</h3>
+							<img className="w-7rem" src={logo} alt="" />
 						</Link>
 						<div className="group flex flex-col items-center">
 							<button className="p-2 rounded-lg md:hidden">
@@ -80,19 +77,33 @@ const NavBar = () => {
 													stroke="currentColor"
 												>
 													<path
-														stroke-linecap="round"
-														stroke-linejoin="round"
-														stroke-width="2"
+														strokeLinecap="round"
+														strokeLinejoin="round"
+														strokewidth="2"
 														d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
 													/>
 												</svg>
 											</a>
 										</Link>
-									) : null}
+									) : (
+										<Link to="/favorites">
+											<button className="btn-favorites mr-10">
+												<Badge
+													badgeContent={
+														cart?.products ? cart.products.length : 0
+													}
+													color="error"
+												>
+													{" "}
+													<FavoriteBorderIcon sx={{ color: "white" }} />
+												</Badge>
+											</button>
+										</Link>
+									)}
 
 									{email ? (
 										<button
-											className="text-white  btn btn-outline"
+											className="text-white  btn btn-outline hover:bg-orange-500"
 											onClick={handleLogout}
 										>
 											Logout
@@ -102,7 +113,7 @@ const NavBar = () => {
 									{email ? null : (
 										<Link to="/auth">
 											<button
-												className=" text-white btn btn-outline"
+												className=" text-white btn btn-outline hover:bg-orange-500"
 												onClick={handleLogout}
 											>
 												LogIn
