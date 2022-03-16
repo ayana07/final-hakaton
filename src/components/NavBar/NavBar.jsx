@@ -2,10 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ADMIN } from "../../consts";
 import { useAuth } from "../../contexts/AuthContexts";
-import logo from '../../assets/logo.png'
-import './NavBar.css'
+import logo from "../../assets/logo.png";
+import "./NavBar.css";
 
 const pages = [
+	{
+		name: "Car Rental",
+		link: "/rents",
+		id: 5,
+	},
 	{
 		name: "About us",
 		link: "/about",
@@ -27,12 +32,12 @@ const NavBar = () => {
 	return (
 		<>
 			<div className="">
-				<nav className=" px-6 relative shadow-md">
+				<nav className=" px-6 relative md">
 					<div className="flex flex-row justify-between items-center py-2">
 						<Link to="/">
 							{/* <img className='w-8rem' src={logo} alt=''/>
 							 */}
-							 <h3  className='text-white'>CaRent</h3>
+							<h3 className="text-white">CaRent</h3>
 						</Link>
 						<div className="group flex flex-col items-center">
 							<button className="p-2 rounded-lg md:hidden">
@@ -41,7 +46,7 @@ const NavBar = () => {
 									fill="#fff"
 									className="h-10 fill-current"
 									viewBox="0 0 16 16"
-									color='#fff'
+									color="#fff"
 								>
 									<path
 										fillRule="evenodd"
@@ -68,8 +73,18 @@ const NavBar = () => {
 												className="px-6 py-1 flex flex-col md:flex-row md:items-center"
 												href="#"
 											>
-												<svg className="h-10 w-10 text-white"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
- 												 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+												<svg
+													className="h-7 w-7 text-white"
+													fill="none"
+													viewBox="0 0 24 24"
+													stroke="currentColor"
+												>
+													<path
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														stroke-width="2"
+														d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+													/>
 												</svg>
 											</a>
 										</Link>
@@ -77,7 +92,7 @@ const NavBar = () => {
 
 									{email ? (
 										<button
-											className="text-white border-white"
+											className="text-white  btn btn-outline"
 											onClick={handleLogout}
 										>
 											Logout

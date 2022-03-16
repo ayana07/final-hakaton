@@ -4,15 +4,18 @@ import "./App.css";
 import MainRoutes from "./MainRoutes";
 import AuthContextsProvaider from "./contexts/AuthContexts";
 import Footer from "./components/Footer/Footer";
+import RentCarContextProvaider from "./contexts/RentContext";
 
 function App() {
 	return (
 		<>
 			<BrowserRouter>
 				<AuthContextsProvaider>
-					{/* <NavBar /> */}
-					<MainRoutes />
-					<Footer />
+					<RentCarContextProvaider>
+						{/* <NavBar /> */}
+						<MainRoutes />
+						<Footer />
+					</RentCarContextProvaider>
 				</AuthContextsProvaider>
 			</BrowserRouter>
 		</>

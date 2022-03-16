@@ -1,5 +1,9 @@
 @media screen and (max-width: 767px) {
-  .burger{
-    flex-direction: column;
-  }
+	.burger {
+		flex-direction: column;
+	}
+	.hidden {
+		background-color: #ccc;
+		z-index: 1;
+	}
 }

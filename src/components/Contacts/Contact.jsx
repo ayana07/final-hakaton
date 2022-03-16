@@ -1,23 +1,24 @@
 import React from "react";
 
-const SectionFeedback = () => {
+const Contact = () => {
 	return (
-		<>
+		<div>
+			\
 			<section className="text-gray-600 body-font relative">
 				<div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
 					<div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-						{/* <iframe
+						{/* <iframe width="100%" height="100%" className="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe> */}
+						<iframe
+							src="https://yandex.ru/map-widget/v1/?um=constructor%3A739f380c5b2b1711507d70cfc9568f417d2ae742a47051ff78938efdd243a1f9&amp;source=constructor"
+							frameborder="0"
 							width="100%"
 							height="100%"
 							className="absolute inset-0"
-							frameBorder="0"
 							title="map"
-							marginHeight="0"
-							marginWidth="0"
+							marginheight="0"
+							marginwidth="0"
 							scrolling="no"
-							src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
-							style="filter: grayscale(1) contrast(1.2) opacity(0.4);"
-						></iframe> */}
+						></iframe>
 						<div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
 							<div className="lg:w-1/2 px-6">
 								<h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
@@ -33,7 +34,7 @@ const SectionFeedback = () => {
 									EMAIL
 								</h2>
 								<a className="text-indigo-500 leading-relaxed">
-									example@email.com
+									rentcar@email.com
 								</a>
 								<h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
 									PHONE
@@ -50,7 +51,7 @@ const SectionFeedback = () => {
 							Post-ironic portland shabby chic echo park, banjo fashion axe
 						</p>
 						<div className="relative mb-4">
-							<label htmlFor="name" className="leading-7 text-sm text-gray-600">
+							<label for="name" className="leading-7 text-sm text-gray-600">
 								Name
 							</label>
 							<input
@@ -61,10 +62,7 @@ const SectionFeedback = () => {
 							/>
 						</div>
 						<div className="relative mb-4">
-							<label
-								htmlFor="email"
-								className="leading-7 text-sm text-gray-600"
-							>
+							<label for="email" className="leading-7 text-sm text-gray-600">
 								Email
 							</label>
 							<input
@@ -75,10 +73,7 @@ const SectionFeedback = () => {
 							/>
 						</div>
 						<div className="relative mb-4">
-							<label
-								htmlFor="message"
-								className="leading-7 text-sm text-gray-600"
-							>
+							<label for="message" className="leading-7 text-sm text-gray-600">
 								Message
 							</label>
 							<textarea
@@ -97,8 +92,8 @@ const SectionFeedback = () => {
 					</div>
 				</div>
 			</section>
-		</>
+		</div>
 	);
 };
 
-export default SectionFeedback;
+export default Contact;
