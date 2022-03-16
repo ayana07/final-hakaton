@@ -1,0 +1,28 @@
+{
+  "cars": [
+    {
+      "name": "skagj",
+      "description": "ksljd",
+      "price": 245,
+      "picture": "https://images7.alphacoders.com/328/thumbbig-328724.webp",
+      "type": "dfkmhd",
+      "id": 1
+    },
+    {
+      "name": "Ferrari",
+      "description": "good",
+      "price": 250,
+      "picture": "https://images2.alphacoders.com/434/thumbbig-434132.webp",
+      "type": "avto car",
+      "id": 4
+    },
+    {
+      "name": "lfdkg",
+      "description": "fdhwo",
+      "price": 500,
+      "picture": "https://images6.alphacoders.com/390/thumbbig-390255.webp",
+      "type": "sdkjgh",
+      "id": 5
+    }
+  ]
+}

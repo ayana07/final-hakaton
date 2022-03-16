@@ -1,9 +1,8 @@
-.auth-back {
-	background: url("../../assets/auth.jpg");
+.admin {
+	background: url("../../assets//aboutUs.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	height: auto;
 	max-width: 100%;
-	box-sizing: border-box;
 }

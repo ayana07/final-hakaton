@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContexts";
+import "./Login.css";
 
 const Login = () => {
 	const {
@@ -18,13 +18,13 @@ const Login = () => {
 
 	return (
 		<div>
-			<div className="animate-pulse min-h-screen bg-slate-200 py-6 flex flex-col justify-center relative overflow-hidden sm:py-12">
-				<span className="border text-4xl text-yellow-800 px-6 pt-10 pb-8 bg-white w-1/2 max-w-md mx-auto rounded-t-md sm:px-10">
+			<div className=" min-h-screen py-6 flex flex-col justify-center relative overflow-hidden sm:py-12">
+				<span className="border text-4xl text-white px-6 pt-10 pb-8 bg w-1/2 max-w-md mx-auto rounded-t-md sm:px-10">
 					Sign in Form
 				</span>
-				<div className="border relative px-4 pt-7 pb-8 bg-white shadow-xl w-1/2 max-w-md mx-auto sm:px-10 rounded-b-md">
+				<div className="border relative px-4 pt-7 pb-8 bg shadow-xl w-1/2 max-w-md mx-auto sm:px-10 rounded-b-md">
 					<form action="">
-						<label htmlFor="" className="block">
+						<label htmlFor="" className="block text-white">
 							Email
 						</label>
 						<input
@@ -42,7 +42,7 @@ const Login = () => {
 							}}
 							placeholder="Email"
 						/>
-						<label htmlFor="" className="block">
+						<label htmlFor="" className="block text-white">
 							Password
 						</label>
 						<input
@@ -71,39 +71,48 @@ const Login = () => {
 									/>
 								</div>
 								<div className="text-sm ml-3">
-									<label
-										htmlFor="remember"
-										className="font-medium text-gray-900"
-									>
+									<label htmlFor="remember" className="font-medium text-white">
 										Remember me
 									</label>
 								</div>
 							</div>
 						</div>
-						{hasAccount ? (
-							<button
-								className="mt-5 bg-green-500 hover:bg-blue-700 shadow-xl text-white uppercase text-sm font-semibold px-14 py-3 rounded"
-								onClick={handleLogin}
-							>
-								Sign In
-							</button>
-						) : (
-							<button
-								className="mt-5 bg-green-500 hover:bg-blue-700 shadow-xl text-white uppercase text-sm font-semibold px-14 py-3 rounded"
-								onClick={handleSignUp}
-							>
-								Sign Up
-							</button>
-						)}
-						{hasAccount ? (
-							<a href="#"
-							variant="body2"
-							onClick={() => setHasAccount(!hasAccount)}>{"Don't have an account? Sign Up"}</a>
-						) : (
-							<a href="#"
-							variant="body2"
-							onClick={() => setHasAccount(!hasAccount)}>{"Have an account? Sign In"}</a>
-						)}
+						<div className="flex flex-col">
+							{hasAccount ? (
+								<button
+									className="mt-5 bg-green-500 hover:bg-blue-700 shadow-xl text-white uppercase text-sm font-semibold px-14 py-3 rounded"
+									onClick={handleLogin}
+								>
+									Sign In
+								</button>
+							) : (
+								<button
+									className="mt-5 bg-green-500 hover:bg-blue-700 shadow-xl text-white uppercase text-sm font-semibold px-14 py-3 rounded"
+									onClick={handleSignUp}
+								>
+									Sign Up
+								</button>
+							)}
+							{hasAccount ? (
+								<a
+									className="text-white"
+									href="#"
+									variant="body2"
+									onClick={() => setHasAccount(!hasAccount)}
+								>
+									{"Don't have an account? Sign Up"}
+								</a>
+							) : (
+								<a
+									className="text-white"
+									href="#"
+									variant="body2"
+									onClick={() => setHasAccount(!hasAccount)}
+								>
+									{"Have an account? Sign In"}
+								</a>
+							)}
+						</div>
 					</form>
 				</div>
 			</div>
